@@ -16,6 +16,29 @@ public class App
         carReference.maxSpeed = 260;
         carReference.mileage = 6.2;
 
+//        carReference.engine = new Engine();
+//        carReference.engine.manufacturer "VW";
+//        carReference.engine.capacity = 2000;
+
+        Engine engine1 = new Engine();
+        engine1.manufacturer = "Vw";
+        engine1.capacity = 2000;
+
+        carReference.engine = engine1;
+
+        System.out.println("Engine details: ");
+        System.out.println(engine1.capacity);
+        System.out.println(carReference.engine.capacity);
+
+        engine1.capacity = 2100;
+
+        System.out.println("Updated engine details: ");
+        System.out.println(engine1.capacity);
+        System.out.println(carReference.engine.capacity);
+
+
+
+
         // concatenation
 
         System.out.println("Properties of " + carReference.name );
