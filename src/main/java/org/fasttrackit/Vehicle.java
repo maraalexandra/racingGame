@@ -17,7 +17,7 @@ public class Vehicle {
     private boolean damaged;
 
     public Vehicle(){
-        totalVehicleCount++;
+       private static int totalVehicleCount++;
     }
 
      //method overloading
@@ -138,5 +138,9 @@ public class Vehicle {
 
     public void setDamaged(boolean damaged) {
         this.damaged = damaged;
+    }
+   //read only property
+    public static int getTotalVehicleCount() {
+        return totalVehicleCount;
     }
 }

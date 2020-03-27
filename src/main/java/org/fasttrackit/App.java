@@ -64,7 +64,7 @@ public class App {
             Mechanic mechanic = new Mechanic();
             mechanic.repair(carReference);
 
-            System.out.println("Is car damaged?" + carReference.damaged);
+            System.out.println("Is car damaged?" + carReference.isDamaged();
 
             System.out.println("Engine details: ");
             System.out.println(engine1.capacity);
