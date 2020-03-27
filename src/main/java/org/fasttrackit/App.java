@@ -10,9 +10,9 @@ public class App {
 
         System.out.println("Please enter vehicle name: ");
         Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.nextLine();
+        String vehicleName = scanner.nextLine();
 
-        System.out.println("Entered name: " + userInput);
+        System.out.println("Entered name: " + vehicleName);
 
         {
 
@@ -66,14 +66,14 @@ public class App {
             System.out.println("Damaged: " + carReference.damaged);
 
             Car car2 = new Car();
-            car2.name = "Lambourghini";
+            car2.name = "Lamborghini";
             car2.damaged = true;
 
             System.out.println("Properties of " + car2.name);
             System.out.println("Damaged: " + car2.damaged);
             System.out.println("Color: " + car2.color);
 
-            //modulo operator
+            //modulo operator// restul impartirii
 //        System.out.println(4 % 2 == 0);
 //        System.out.println(4 % 2 );
 //        System.out.println(4 % 3);
