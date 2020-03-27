@@ -43,12 +43,14 @@ public class App {
 
 
             Car carReference = new Car(engine1);
-            carReference.name = "Audi";
-            carReference.color = "red";
-            carReference.maxSpeed = 260;
-            carReference.mileage = 6.2;
-            carReference.fuelLevel = 100;
-            carReference.damaged = true;
+            carReference.setName("Audi");
+            carReference.setColor("red");
+            carReference.setMaxSpeed(260);
+            carReference.setMileage(6.2);
+            carReference.setFuelLevel(100);
+            carReference.setDamaged(true);
+
+            System.out.println("Name: " + carReference.getName());
 
 //        carReference.engine = new Engine();
 //        carReference.engine.manufacturer "VW";
