@@ -4,25 +4,21 @@ public class Vehicle {
 
     //static variable / class variable
     static int totalVehicleCount;
+    public String name;
+    public boolean damaged;
+    public int totalDistance;
 
 
     // instance variables
     private int racingNumber;
-    private String name;
     private int maxSpeed;
     private double mileage;
     private String color;
     private double fuelLevel;
-    private double totalDistance;
-    private boolean damaged;
+
 
     public Vehicle(){
-       private static int totalVehicleCount++;
-    }
-
-     //method overloading
-    public double accelerate(double speed){
-        return accelerate(speed,1);
+        totalVehicleCount++;
     }
 
     public double accelerate(double speed, double durationInHours)  {
@@ -128,7 +124,7 @@ public class Vehicle {
         return totalDistance;
     }
 
-    public void setTotalDistance(double totalDistance) {
+    public void setTotalDistance(int totalDistance) {
         this.totalDistance = totalDistance;
     }
 
@@ -139,8 +135,5 @@ public class Vehicle {
     public void setDamaged(boolean damaged) {
         this.damaged = damaged;
     }
-   //read only property
-    public static int getTotalVehicleCount() {
-        return totalVehicleCount;
-    }
+
 }

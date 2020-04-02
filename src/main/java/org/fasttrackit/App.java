@@ -41,7 +41,6 @@ public class App {
             engine1.capacity = 2000;
 
 
-
             Car carReference = new Car(engine1);
             carReference.setName("Audi");
             carReference.setColor("red");
@@ -64,7 +63,7 @@ public class App {
             Mechanic mechanic = new Mechanic();
             mechanic.repair(carReference);
 
-            System.out.println("Is car damaged?" + carReference.isDamaged();
+            System.out.println("Is car damaged?" + carReference.isDamaged());
 
             System.out.println("Engine details: ");
             System.out.println(engine1.capacity);
@@ -80,11 +79,11 @@ public class App {
             // concatenation
 
             System.out.println("Properties of " + carReference.name);
-            System.out.println("Color: " + carReference.color);
-            System.out.println("max speed: " + carReference.maxSpeed);
-            System.out.println("milleage: " + carReference.mileage);
-            System.out.println("Fuel level" + carReference.fuelLevel);
-            System.out.println("Racing number" + carReference.racingNumber);
+            System.out.println("Color: " + carReference.getColor());
+            System.out.println("max speed: " + carReference.getMaxSpeed());
+            System.out.println("milleage: " + carReference.getMileage());
+            System.out.println("Fuel level" + carReference.getFuelLevel());
+            System.out.println("Racing number" + carReference.getRacingNumber());
             System.out.println("Damaged: " + carReference.damaged);
 
             Car car2 = new Car(new Engine());
@@ -93,7 +92,7 @@ public class App {
 
             System.out.println("Properties of " + car2.name);
             System.out.println("Damaged: " + car2.damaged);
-            System.out.println("Color: " + car2.color);
+            System.out.println("Color: " + car2.getColor());
 
             //modulo operator// restul impartirii
 //        System.out.println(4 % 2 == 0);
