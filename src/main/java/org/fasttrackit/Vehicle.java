@@ -17,13 +17,13 @@ public class Vehicle {
     private double fuelLevel;
 
 
-    public Vehicle(){
+    public Vehicle() {
         totalVehicleCount++;
     }
 
-    public double accelerate(double speed, double durationInHours)  {
+    public double accelerate(double speed, double durationInHours) {
 
-        if (fuelLevel <= 0 )  {
+        if (fuelLevel <= 0) {
 
             System.out.println("Not enough fuel.");
             return 0;
@@ -39,9 +39,9 @@ public class Vehicle {
         } else {
             System.out.println("Valid speed entered!");
         }
-           double mileageMultiplier = 1;
-          if (speed > 120)
-             mileageMultiplier = speed / 100;
+        double mileageMultiplier = 1;
+        if (speed > 120)
+            mileageMultiplier = speed / 100;
 
 
         System.out.println(name + "is accelerating with " + speed + "km/h for" + durationInHours + "h");
@@ -55,21 +55,27 @@ public class Vehicle {
 
 
         double usedFuel = traveledDistance * mileage / 100;
-         usedFuel *= mileageMultiplier;
+        usedFuel *= mileageMultiplier;
 
 
         fuelLevel = fuelLevel - usedFuel;
         //same result as the instruction above
- //       fuelLevel -= usedFuel;
+        //       fuelLevel -= usedFuel;
 
         System.out.println("Remaining fuel: " + fuelLevel);
 
         return traveledDistance;
     }
-    public void decelerate()  {
+
+    public void decelerate() {
 
         System.out.println("This is just a demo method");
 
+    }
+      //co-variant return type
+    protected Vehicle clone(){
+
+        return new Vehicle();
     }
 
     public int getRacingNumber() {
@@ -136,4 +142,23 @@ public class Vehicle {
         this.damaged = damaged;
     }
 
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", damaged=" + damaged +
+                ", totalDistance=" + totalDistance +
+                ", racingNumber=" + racingNumber +
+                ", maxSpeed=" + maxSpeed +
+                ", mileage=" + mileage +
+                ", color='" + color + '\'' +
+                ", fuelLevel=" + fuelLevel +
+                '}';
+    }
 }
+
+
+
+
+
