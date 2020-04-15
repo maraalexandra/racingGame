@@ -12,14 +12,53 @@ public class App {
         Game game = new Game();
         game.start();
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter number: ");
+//
+//        try {
+//            int integer = scanner.nextInt();
+//            System.out.println("Entered: " + integer);
+//        } catch (Exception e) {
+//            System.out.println("Invalid number");
+//            scanner.nextLine();
+//        }
 
-    }
+
+//        System.out.println("Enter numbers: ");
+//        int integer1 = scanner.nextInt();
+//        int integer2 = scanner.nextInt();
+//        int integer3 = scanner.nextInt();
+//        int integer4 = scanner.nextInt();
+//        System.out.println("Entered2: " + integer1);
+//        System.out.println("Entered2: " + integer2);
+//        System.out.println("Entered2: " + integer3);
+//        System.out.println("Entered2: " + integer4);
+
+
+
+
+
+//        System.out.println("Enter String: ");
+//        String s2 = scanner.nextLine();
+//        scanner.nextLine();
+//        System.out.println("Entered 2: " + s2);
+//
+//        System.out.println("Enter String: ");
+//        String s3 = scanner.nextLine();
+//        scanner.nextLine();
+//        System.out.println("Entered 3: " + s3);
+
+
+//        Game game = new Game();
+//        game.start();
+//
+//
+//    }
 
 //         String pool
 //         String a = "test";
 //         String b = "test";
 //         String c = new String("test");
-
 
 
 //
@@ -129,7 +168,8 @@ public class App {
 ////        System.out.println(4 % 2 == 0);
 ////        System.out.println(4 % 2 );
 ////        System.out.println(4 % 3);
-        }
+    }
+}
 
 
 

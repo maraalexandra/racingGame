@@ -1,9 +1,10 @@
 package org.fasttrackit;
 
+import org.fasttrackit.utils.ScannerUtils;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
@@ -69,10 +70,11 @@ public class Game {
           for (int i = 0; i < playerCount; i++);{
               int i = 0;
               System.out.println("Creating vehicle for player " + (i + 1));
-              String name = getVehicleNameFromUser();
+
 
               Vehicle vehicle = new Vehicle();
-              vehicle.setName(name);
+              String name;
+             //vehicle.setName();
               vehicle.setFuelLevel(80);
               vehicle.setMileage(ThreadLocalRandom.current().nextDouble(5,15));
               vehicle.setMaxSpeed(260);
@@ -121,8 +123,8 @@ public class Game {
            System.out.println("Please select a track:");
 
            try {
-               Scanner scanner = new Scanner(System.in);
-               int trackNumber = scanner.nextInt();
+
+               int trackNumber = ScannerUtils.nextSingleInt();
                return tracks[trackNumber - 1];
            }catch(InputMismatchException e){
                throw new Exception("Please enter a number");
@@ -136,25 +138,25 @@ public class Game {
 
 
 
-    private String getVehicleNameFromUser() {
+    private int getVehicleNameFromUser() {
 
         System.out.println("Please enter vehicle name: ");
-        Scanner scanner = new Scanner(System.in);
-         return scanner.nextLine();
+         return ScannerUtils.nextSingleInt();
+
     }
 
     private int getPlayerCountFromUser(){
         System.out.println("Please enter number of players: ");
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
+
+        return ScannerUtils.nextSingleInt();
     }
 
     private double getAccelerationSpeedFormUser(){
         System.out.println("Please enter speed");
-        Scanner scanner = new Scanner (System.in);
+
 
         try {
-            return scanner.nextDouble();
+            return ScannerUtils.nextSingleDouble();
         }catch (InputMismatchException e){
             System.out.println("You have entered an invalid value. Please try again");
             return getAccelerationSpeedFormUser();
