@@ -158,6 +158,8 @@ public class Vehicle {
     }
 
 
+    public void accelerate(double speed) {
+    }
 }
 
 
