@@ -15,7 +15,7 @@ public class Game {
     public void start() throws Exception {
         System.out.println("WELCOME!");
 
-
+        int playerCount = getPlayerCountFromUser();
 
         InitializeTracks();
         displayTracks();
@@ -23,19 +23,28 @@ public class Game {
         Track selectedTrack = getSelectedTrackFromUser();
         System.out.println("Selected track: " + selectedTrack.getName());
 
+//        String test = "a b c d";
+//        String[] letters = test.split(" ");
+
 
         initializeCompetitors();
 
         playOneRound();
     }
     private void playOneRound() {
-        System.out.println("New Round");
-        for (Vehicle vehicle : competitors) {
+        System.out.println("\nNew Round");
 
-            System.out.println("It's " + vehicle.getName() + "'s turn");
+        //enhanced for (for-each)
+        for (Vehicle vehicle : competitors){
+            System.out.println("It's " + vehicle.getName() + "'s turn.");
             double speed = getAccelerationSpeedFormUser();
             vehicle.accelerate(speed);
         }
+
+        for (Track track : tracks) {
+            System.out.println((track.getName()));
+        }
+
     }
       private void initializeCompetitors(){
           int playerCount = getPlayerCountFromUser();
@@ -51,6 +60,7 @@ public class Game {
               vehicle.setMaxSpeed(260);
 
             competitors.add(vehicle);
+
 
           }
 
@@ -88,7 +98,8 @@ public class Game {
 
     }
 
-       private Track getSelectedTrackFromUser() throws Exception {
+
+    private Track getSelectedTrackFromUser() throws Exception {
            System.out.println("Please select a track:");
 
            try {
